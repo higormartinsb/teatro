@@ -4,6 +4,17 @@
 @import url(depoimentos.css);
 @import url(ajudapix.css);
 
+/* Googlefont Poppins CDN Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  min-height: 100vh;
+}
     .about-container {
       display: flex;
       flex-direction: row-reverse; /* Inverte a ordem: imagem vem antes */
