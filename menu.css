@@ -31,7 +31,7 @@ nav .navbar{
   padding: 0 50px;
 }
 .navbar .logo a {
-  font-size: 25px;
+  font-size: 22px;
   color: #fff;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* sombra preta suave */
   text-decoration: none;
@@ -190,8 +190,8 @@ nav .navbar .links li:hover .js-sub-menu{
   }
 
   nav .navbar .logo a{
-    font-size: 20px;
-  nav .navbar .links li{
+    font-size: 19px;
+    nav .navbar .links li{
     padding: 0 10px;
     white-space: nowrap;
   }
@@ -199,7 +199,7 @@ nav .navbar .links li:hover .js-sub-menu{
     font-size: 15px;
   }
 }
-@media (max-width:800px){
+@media (max-width:820px){
   nav{
     /* position: relative; */
   }

@@ -71,19 +71,19 @@
   </nav>
  <!-- CONTAINER "SOBRE NÓS" -->
 <div style="background: linear-gradient(135deg, #1e2a3a, #394b61); height: 73px;"></div>
-  <!-- Formulário e Descrição em duas colunas -->
-  <div class="container mt-5">
-    <div class="row">
-      <!-- Descrição e Título à Esquerda -->
-      <div class="col-md-6">
-        <h2 class="display-4" style="font-weight: 800; color: #2b343f;  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);">Faça Parte da historia</h2>
-        <p class="lead text-muted mb-4">O teatro da Paixão de Cristo ganha vida com o seu apoio.
-           Ao patrocinar, você garante visibilidade para sua marca em um evento de impacto, com público comprometido e
-            apaixonado.</p>
-      </div>
+ 
+<!-- Formulário e Descrição em duas colunas -->
+<div class="container mt-5">
+  <div class="row">
+    <!-- Descrição e Título à Esquerda (Será movido para cima em telas pequenas) -->
+    <div class="col-md-6 mb-4 mb-md-0 order-1 order-md-0">
+      <h2 class="display-4 font-weight-bold text-dark" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">Faça Parte da História</h2>
+      <p class="lead text-muted mb-4">O teatro da Paixão de Cristo ganha vida com o seu apoio. Ao patrocinar, você garante visibilidade para sua marca em um evento de impacto, com público comprometido e apaixonado.</p>
+    </div>
 
-      <!-- Formulário à Direita -->
-      <div class="col-md-6" style="background: linear-gradient(135deg, #1e2a3a, #394b61); padding: 20px; border-radius: 20px;">
+    <!-- Formulário à Direita (Fica abaixo do texto em telas pequenas) -->
+    <div class="col-md-6">
+      <div class="form-container">
         <form id="contactForm">
           <!-- Campo de Texto -->
           <div class="form-group mb-3 text-white">
@@ -93,31 +93,32 @@
           <!-- Campo de E-mail -->
           <div class="form-group mb-3 text-white">
             <label for="email">Cidade / ES</label>
-            <input type="email" class="form-control mt-2" id="Cidade" placeholder="Ex. São Gabriel da palha - ES" required>
+            <input type="email" class="form-control mt-2" id="Cidade" placeholder="Ex. São Gabriel da Palha - ES" required>
           </div>
-          <!-- Valor-->
+          <!-- Valor -->
           <div class="form-group mb-3 text-white">
-            <label for="cidade">Valor do Patrocinio</label>
+            <label for="patrocinio">Valor do Patrocínio</label>
             <select class="form-control mt-2" id="patrocinio" required>
-                <option value="">Selecione o Valor</option>
-                <option value="sao-gabriel">R$2.000</option>
-                <option value="vitoria">R$1.000</option>
-                <option value="cachoeiro">R$500</option>
-                <!-- Adicione outras cidades aqui -->
+              <option value="">Selecione o Valor</option>
+              <option value="sao-gabriel">R$2.000</option>
+              <option value="vitoria">R$1.000</option>
+              <option value="cachoeiro">R$500</option>
             </select>
-        </div>
-        
+          </div>
+          
           <!-- Campo de Foto -->
           <div class="form-group mb-3 text-white">
             <label for="file">Logo da empresa</label>
             <input type="file" class="form-control-file mt-2" id="file" required>
           </div>
+          
           <!-- Botão de Enviar -->
-          <button type="submit" class="btn btn-primary mt-2">Enviar para o WhatsApp</button>
+          <button type="submit" class="btn btn-primary mt-2 w-100">Enviar para o WhatsApp</button>
         </form>
       </div>
     </div>
   </div>
+</div>
   <!-- Patrocinadores com Carrossel -->
   <section class="patrocinio-section">
     <h3 class="titulo-patrocinio">Nossos Patrocinadores</h3>
@@ -276,6 +277,90 @@
       &copy; 2025 VitrineWeb. Todos os direitos reservados.
     </div>
   </footer>
+
+  <!-- Adicionar o CSS -->
+<style>
+  h2 {
+    margin-top: 150px;
+  }
+  /* Responsividade e ajuste de fontes */
+  @media (max-width: 920px) {
+    .container {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  /* Formulário com fundo gradiente */
+  .form-container {
+    background: linear-gradient(135deg, #1e2a3a, #394b61);
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  /* Ajustando os campos do formulário */
+  .form-control {
+    border-radius: 10px !important;
+  }
+
+  /* Ajuste nas fontes e bordas */
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #2b343f;
+    margin: 20px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 1.125rem;
+    margin: 20px;
+    text-align: center;
+  }
+
+  /* Garantir que o botão fique adequado em telas menores */
+  .btn-primary {
+    font-size: 1.125rem;
+    padding: 12px 20px;
+    border-radius: 50px;
+  }
+
+  /* Ajuste de responsividade para telas pequenas */
+  @media (max-width: 768px) {
+    .display-4 {
+      font-size: 2rem;
+    }
+    .form-group label {
+      font-size: 0.9rem;
+    }
+    .form-control {
+      font-size: 1rem;
+    }
+    .btn-primary {
+      font-size: 1rem;
+      padding: 10px 15px;
+    }
+    .col-md-6 {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    /* Layout em coluna única para dispositivos menores */
+    .row {
+      flex-direction: column-reverse;
+    }
+    .container {
+      padding-top: 30px;
+    }
+    h2{
+      margin-top: -50px;
+    }
+  }
+
+  /* Adiciona um espaço entre os campos do formulário para evitar que fiquem muito próximos */
+  .form-group {
+    margin-bottom: 20px;
+  }
+</style>
   
   <!-- Ícones Font Awesome -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>  
