@@ -90,26 +90,28 @@
             <label for="name">Nome da Empresa</label>
             <input type="text" class="form-control mt-2" id="name" placeholder="Ex. Sansil Tintas" required>
           </div>
-          <!-- Campo de E-mail -->
-          <div class="form-group mb-3 text-white">
-            <label for="email">Cidade / ES</label>
-            <input type="email" class="form-control mt-2" id="Cidade" placeholder="Ex. São Gabriel da Palha - ES" required>
-          </div>
+
+          <div class="form-group mb-3 text-white row">
+            <div class="col-md-6 mb-4 mb-md-0 order-1 order-md-0">
+              <label for="Cidade">Cidade</label>
+              <input type="text" class="form-control mt-2" id="Cidade" placeholder="Ex. São Gabriel da Palha" required>
+            </div>
+          
+            <div class="col-md-6 order-0 order-md-1">
+              <label for="Estado">Estado</label>
+              <input type="text" class="form-control mt-2" id="Estado" placeholder="Ex. ES" required>
+            </div>
+          </div>          
+          
           <!-- Valor -->
           <div class="form-group mb-3 text-white">
             <label for="patrocinio">Valor do Patrocínio</label>
             <select class="form-control mt-2" id="patrocinio" required>
               <option value="">Selecione o Valor</option>
-              <option value="sao-gabriel">R$2.000</option>
-              <option value="vitoria">R$1.000</option>
-              <option value="cachoeiro">R$500</option>
+              <option value="2.000 Reais">R$2.000</option>
+              <option value="1.000 Reais">R$1.000</option>
+              <option value="500 Reais">R$500</option>
             </select>
-          </div>
-          
-          <!-- Campo de Foto -->
-          <div class="form-group mb-3 text-white">
-            <label for="file">Logo da empresa</label>
-            <input type="file" class="form-control-file mt-2" id="file" required>
           </div>
           
           <!-- Botão de Enviar -->
@@ -361,6 +363,38 @@
     margin-bottom: 20px;
   }
 </style>
+
+<script>
+  // Captura o envio do formulário
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evita o envio tradicional do formulário
+    
+    // Coleta os valores dos campos
+    var name = document.getElementById('name').value;
+    var cidade = document.getElementById('Cidade').value;
+    var estado = document.getElementById('Estado').value;
+    var patrocinio = document.getElementById('patrocinio').value;
+
+    // Mensagem padrão antes das informações
+    var mensagemPadrao = "*Olá, estou muito interessado em apoiar este projeto e me tornar um patrocinador, Segue abaixo as minhas informações para formalizarmos essa parceria.:*\n\n";
+
+    // Monta a mensagem com a parte padrão e as informações do formulário
+    var message = encodeURIComponent(
+      mensagemPadrao + // Mensagem padrão inicial
+      "*Nome da Empresa:* " + name + "\n" + // Quebra de linha e negrito no nome da empresa
+      "*Cidade:* " + cidade + "\n" +       // Quebra de linha e negrito na cidade
+      "*Estado:* " + estado + "\n" +       // Quebra de linha e negrito no estado
+      "*Valor do Patrocínio:* " + patrocinio // Negrito no valor do patrocínio
+    );
+
+    // Número do WhatsApp para envio
+    var whatsappNumber = "5527988891413";  // Substitua pelo número do WhatsApp desejado
+    var whatsappUrl = "https://wa.me/" + whatsappNumber + "?text=" + message;
+
+    // Redireciona para o WhatsApp com a mensagem
+    window.open(whatsappUrl, '_blank');
+  });
+</script>
   
   <!-- Ícones Font Awesome -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>  
