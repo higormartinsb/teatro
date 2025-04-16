@@ -3,7 +3,7 @@
     flex-direction: row-reverse; /* Inverte a ordem: imagem vem antes */
     justify-content: space-between;
     align-items: center;
-    padding: 60px 20px;
+    padding: 20px 20px;
     max-width: 1200px;
     margin: 0 auto;
     gap: 40px;
@@ -55,7 +55,7 @@
     transform: scale(1.03);
   }
   .about-titulo {
-    background: linear-gradient(135deg, #1e2a3a, #394b61);
+    background: linear-gradient(135deg, #382403, #332204);
     color: white;
     text-align: center;
     padding: 40px 20px;

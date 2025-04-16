@@ -1,5 +1,4 @@
 /* Estilo base */
-/* Estilo base */
 .content-box {
   background-color: rgba(0, 0, 0, 0.7);
   color: #fff;
@@ -17,11 +16,20 @@
   
   .btn-warning {
     font-weight: bold;
+    background: linear-gradient(135deg, #865b15, #674915);
+    color: white;
+    border: 1px solid #674915;
+  }
+
+  .btn:hover {
+    border-color: #865b15;
+    background: white;
+    color: #865b15;
   }
   
   /* Slider */
 .slider-bg {
-  background: url('img/banner.png') no-repeat center center;
+  background: url('img/teste4.png') no-repeat center center;
   background-size: cover;
   padding: 100px 15px;
   display: flex;

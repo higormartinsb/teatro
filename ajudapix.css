@@ -1,26 +1,35 @@
+.voluntario-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+}
+
 .chamada-voluntario {
-  background: linear-gradient(135deg, #1e2a3a, #394b61);
   color: white;
   text-align: center;
   padding: 80px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 50%;
+  box-sizing: border-box;
+  background-size: cover;
+  background-position: center;
 }
 
-.voluntario-content {
-  max-width: 700px;
+/* imagem personalizada para cada card */
+.card1 {
+  background-image: url('img/teste2.png');
 }
 
-.voluntario-content h3 {
-  font-size: 36px;
-  margin-bottom: 20px;
-  font-weight: bold;
-  text-transform: uppercase;
+.card2 {
+  background-image: url('img/teste3.png');
 }
 
-.voluntario-content p {
-  font-size: 18px;
-  line-height: 1.6;
-  color: #ddd;
+/* responsivo */
+@media (max-width: 768px) {
+  .chamada-voluntario {
+    width: 100%;
+  }
 }
